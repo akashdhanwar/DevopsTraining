@@ -13,8 +13,9 @@ git add Filename		-	To add to staging, add to git tracking
 git add .			-	For all files
 git commit -m "message"		-	Commit
 git commit -am "message"	-	Add and commit, but only old files and not for new created files
-git log				-	Last 10 commits with id
-git log --author="name/emailId"	-	Filter logs
+git log				-	Last 10 commits with id, print commit logs
+git log --author="name/emailId"
+git log --oneline
 --------------------------------------------------------------------------------------------------------------
 
 ------------------------------- PULL/PUSH/MERGE ------------------------------------------------------------------------------------------------------
@@ -22,15 +23,27 @@ git clone -b main URL		-	Clone a code
 git pull			-	Pull the code
 git push			-	Push the code
 
-git branch			-	View Branches
+git branch			-	View Branches. -a to view all branches
 git branch branchName		-	Create a branch, not depicted initially in github
 git switch branchName		-	Switch to branch
-git push --set-upstream origin branchName	-	Push to a branch by creating upstream
+git checkout branchName		-	Switch to branch
+git branch -m oldName newName	-	Rename a branch
+git branch -d branchName	-	Delete branch
+git push --set-upstream origin branchName	-	Push to a branch by creating upstream/ push a branch to remote repository
 git pull origin develop		-	Pull code from a branch
 git merge branchName		-	Merge a branch, but still it will not depict. Add files, commit and push, then it will be available as merged
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------ RESET(rollback to previous commit) REVERT, Compare ---------------------------------------------------------------------
+git reset commitID		-	Reset to a particular commit. Used for local repository revert. 
+					Reset --soft resets the history of commit but --hard resets files also 
+git revert commitID/HEAD	-	Reverts all changes as a new commit. Used if changed are pushed to remote repository
+git diff fileName		-	To see what changes are done in file in Staging area and Working area
+git diff commitId1 commitId2	-	Compare different commit id changes
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
 
-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 - PAT
+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 - PAT
