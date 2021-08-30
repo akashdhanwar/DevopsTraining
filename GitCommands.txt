@@ -7,15 +7,17 @@ cat /root/.ssh/id_ed25519.pub		-	Check key
 ssh -t git@github.com			-	Test SSH key
 --------------------------------------------------------------------------------------------------------------
 
+-------------------------------- BASIC -----------------------------------------------------------------------
 git status
 git add Filename		-	To add to staging, add to git tracking
 git add .			-	For all files
 git commit -m "message"		-	Commit
 git commit -am "message"	-	Add and commit, but only old files and not for new created files
-
 git log				-	Last 10 commits with id
 git log --author="name/emailId"	-	Filter logs
+--------------------------------------------------------------------------------------------------------------
 
+------------------------------- PULL/PUSH/MERGE ------------------------------------------------------------------------------------------------------
 git clone -b main URL		-	Clone a code
 git pull			-	Pull the code
 git push			-	Push the code
@@ -25,6 +27,9 @@ git branch branchName		-	Create a branch, not depicted initially in github
 git switch branchName		-	Switch to branch
 git push --set-upstream origin branchName	-	Push to a branch by creating upstream
 git pull origin develop		-	Pull code from a branch
+git merge branchName		-	Merge a branch, but still it will not depict. Add files, commit and push, then it will be available as merged
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
