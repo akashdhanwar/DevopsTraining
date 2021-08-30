@@ -1,0 +1,9 @@
+sudo apt-get update	-	Update System
+apt-get install git	-	Install a software
+
+touch filename.txt	-	To create file
+cat Filename.txt	-	To print file
+pwd			-	Present working directory
+ls -al			-	View Files and directory in a directory
+vi Filename		-	Open/Edit a file
+

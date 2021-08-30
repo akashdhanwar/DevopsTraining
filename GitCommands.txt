@@ -1,0 +1,16 @@
+git config --global user.name=""
+git config --global user.email=""
+
+git status
+git add Filename		-	To add to staging, add to git tracking
+git add .			-	For all files
+git commit -m "message"		-	Commit
+git commit -am "message"	-	Add and commit, but only old files and not for new created files
+
+git log				-	Last 10 commits with id
+git log --author="name/emailId"	-	Filter logs
+
+git clone -b main URL		-	Clone a code
+git pull			-	Pull the code
+
+
