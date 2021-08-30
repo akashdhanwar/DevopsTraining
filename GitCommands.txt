@@ -1,6 +1,12 @@
 git config --global user.name=""
 git config --global user.email=""
 
+------------------------------ LINUX RELATED STUFF -----------------------------------------------------------
+ssh-keygen -t ed25519 -C "email"	-	Generate SSH key for authentication
+cat /root/.ssh/id_ed25519.pub		-	Check key
+ssh -t git@github.com			-	Test SSH key
+--------------------------------------------------------------------------------------------------------------
+
 git status
 git add Filename		-	To add to staging, add to git tracking
 git add .			-	For all files
