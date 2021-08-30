@@ -8,3 +8,4 @@ ls -al						-	View Files and directory in a directory
 vi Filename					-	Open/Edit a file
 echo "text" >> fileName.txt			-	Write to a file
 cp filename filename DestinationDirectory	-	Copy Files
+rm filename					-	Delete a file

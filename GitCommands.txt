@@ -32,10 +32,10 @@ git branch -m oldName newName	-	Rename a branch
 git branch -d branchName	-	Delete branch
 git push --set-upstream origin branchName	-	Push to a branch by creating upstream/ push a branch to remote repository
 git pull origin develop		-	Pull code from a branch
-git merge branchName		-	Merge a branch, but still it will not depict.
+git merge branchName		-	Merge a branch to current branch, but still it will not depict.
 					Add it to local git, commit and push, then it will be available as merged
 					Can provide a message by -m
-					In case of conflict, open file by vi and edit it
+					In case of conflict, open file by vi and edit it and push it. Resolved!
 ------------------------------------------------------------------------------------------------------------------------------------
 
 ------------------------------ RESET(rollback to previous commit) REVERT, Compare --------------------------------------------
