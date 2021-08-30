@@ -27,6 +27,7 @@ git branch			-	View Branches. -a to view all branches
 git branch branchName		-	Create a branch, not depicted initially in github
 git switch branchName		-	Switch to branch
 git checkout branchName		-	Switch to branch
+git checkout -b newBranch main	-	Create a new branch and copy main branch content to it
 git branch -m oldName newName	-	Rename a branch
 git branch -d branchName	-	Delete branch
 git push --set-upstream origin branchName	-	Push to a branch by creating upstream/ push a branch to remote repository
