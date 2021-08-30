@@ -18,5 +18,14 @@ git log --author="name/emailId"	-	Filter logs
 
 git clone -b main URL		-	Clone a code
 git pull			-	Pull the code
+git push			-	Push the code
+
+git branch			-	View Branches
+git branch branchName		-	Create a branch, not depicted initially in github
+git switch branchName		-	Switch to branch
+git push --set-upstream origin branchName	-	Push to a branch by creating upstream
+git pull origin develop		-	Pull code from a branch
 
 
+
+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 - PAT
