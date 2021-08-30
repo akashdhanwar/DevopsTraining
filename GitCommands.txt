@@ -47,11 +47,18 @@ git diff commitId1 commitId2	-	Compare different commit id changes
 
 ------------------------------------------------------------------------------------------------------------------------------
 
------------------------------- STASH -------------------------------------------------------------
+------------------------------ STASH -----------------------------------------------------------------------------------------
+git stash			-	Make your other changes, applies only to tracked files
+git stash -a			-	For untracked Files, means add untracked files as well
+git stash save "message"	-	Stash with a message
+git stash list			
+git stash apply			-	To get back stashed changes
+git stash drop			-	To delete a stash
+git stash pop			-	To get back stashed changes + To delete a stash, removes stash from stash area also
 
---------------------------------------------------------------------------------------------------
+git stash show stash@{index}	-	For a particular stash, see changes in that stash. For only tracked files
+git stash apply stash@{index}	-	For a particular stash
+git stash pop stash@{index}	
 
 
-
-
-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 - PAT
+------------------------------------------------------------------------------------------------------------------------------
