@@ -38,17 +38,19 @@ Master node schedules Build job, dispatch execution to slave node, monitor resul
 Slave node only executes build dispatched by master
 ------------------------------------------------------------------------------------------------------------------
 
----------------------------------------------- JOB CREATION ------------------------------------------------------
+---------------------------------------------- JOB CREATION -------------------------------------------------------------------------
 Login and create a new item
 We can manage our Jobs in different categories as mentioned in configure tab.
 
 Executing scripts				-	Create a file in /tmp in linux, named testscript.sh and add some data to it.
 							Give permission by chmod 755 testscript.sh and run ./testscript.sh
 							Add the /tmp/testscript.sh Akash 21 in Jenkins execute shell
-Passing Parameters dynamically to job		-	In general config, check this project is parameterized
+Passing Parameters dynamically to job		-	In general config, check this project is parameterized. 
+							Used in Automated testing where different different data is used
+
 							
 
 
-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------
 
 
