@@ -11,6 +11,36 @@ printenv							-	Print environment variables
 ------------------------------------------------------------------------------------------------------------------
 
 ----------------------------------------------------- JENKINS SETUP ----------------------------------------------
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+sudo systemctl enable jenkins		-	Enable on system startup
+
+http://10.0.2.20:8080			-	View Jenkins, IP:Port.
+						Copy initial Admin password by printing cat the url provided.
+						Default plugins, give admin username pw
+
+My Local Username Pw			-	akashdhanwar
+http://10.0.2.20:8080/			-	Can give domain name in Jenkins URL to redirect to it
+
+
+Can use on DigitalOcean/Aws/Azure/LocalMachine
 
 
 ------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------- MASTER and WORKER/SLAVE NODES -------------------------------------
+Master node controls load distribution of slave nodes
+On slave node Jenkins installation not required, only java required
+
+Master node schedules Build job, dispatch execution to slave node, monitor result and record the build result
+Slave node only executes build dispatched by master
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
