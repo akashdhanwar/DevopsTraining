@@ -1,0 +1,16 @@
+Jenkins is a Execution Engine that is written in java and supports integration, building, testing and deployment.
+We can create jobs in Jenkins Server that can help local testing and merging to remote server automatically.
+
+------------------------------------------------------ JAVA SETUP ------------------------------------------------ 
+sudo apt-get -y install openjdk-8-jdk openjdk-8-jre		-	Install Java 8 or 11 for Jenkins
+printenv							-	Print environment variables
+" cat >> etc/environment <<EOL					-	Set Path of java 8
+> JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+> JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+> EOL "
+------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------- JENKINS SETUP ----------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------
