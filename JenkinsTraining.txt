@@ -10,6 +10,7 @@ printenv							-	Print environment variables
 > EOL "
 ------------------------------------------------------------------------------------------------------------------
 
+
 ----------------------------------------------------- JENKINS SETUP ----------------------------------------------
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
@@ -30,6 +31,7 @@ http://10.0.2.20:8080/			-	Can give domain name in Jenkins URL to redirect to it
 Can use on DigitalOcean/Aws/Azure/LocalMachine
 ------------------------------------------------------------------------------------------------------------------
 
+
 ---------------------------------------------- MASTER and WORKER/SLAVE NODES -------------------------------------
 Master node controls load distribution of slave nodes
 On slave node Jenkins installation not required, only java required
@@ -38,7 +40,8 @@ Master node schedules Build job, dispatch execution to slave node, monitor resul
 Slave node only executes build dispatched by master
 ------------------------------------------------------------------------------------------------------------------
 
----------------------------------------------- JOB CREATION -------------------------------------------------------------------------
+
+---------------------------------------------- JOB CREATION/BASICS -----------------------------------------------------------------
 Login and create a new item
 We can manage our Jobs in different categories as mentioned in configure tab.
 
@@ -47,10 +50,12 @@ Executing scripts				-	Create a file in /tmp in linux, named testscript.sh and a
 							Add the /tmp/testscript.sh Akash 21 in Jenkins execute shell
 Passing Parameters dynamically to job		-	In general config, check this project is parameterized. 
 							Used in Automated testing where different different data is used
-
-							
-
-
 -------------------------------------------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------- CONTINUOUS INTEGRATION --------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------------
 
 
