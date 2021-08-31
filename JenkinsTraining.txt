@@ -40,7 +40,15 @@ On slave node Jenkins installation not required, only java required
 Master node schedules Build job, dispatch execution to slave node, monitor result and record the build result
 Slave node only executes build dispatched by master
 
+------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------- JOB CREATION ------------------------------------------------------
+Login and create a new item
+We can manage our Jobs in different categories as mentioned in configure tab.
+
+Executing scripts 
 
 
 ------------------------------------------------------------------------------------------------------------------
+
 
