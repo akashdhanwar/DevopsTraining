@@ -27,10 +27,7 @@ http://10.0.2.20:8080			-	View Jenkins, IP:Port.
 My Local Username Pw			-	akashdhanwar
 http://10.0.2.20:8080/			-	Can give domain name in Jenkins URL to redirect to it
 
-
 Can use on DigitalOcean/Aws/Azure/LocalMachine
-
-
 ------------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------- MASTER and WORKER/SLAVE NODES -------------------------------------
@@ -39,14 +36,17 @@ On slave node Jenkins installation not required, only java required
 
 Master node schedules Build job, dispatch execution to slave node, monitor result and record the build result
 Slave node only executes build dispatched by master
-
 ------------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------- JOB CREATION ------------------------------------------------------
 Login and create a new item
 We can manage our Jobs in different categories as mentioned in configure tab.
 
-Executing scripts 
+Executing scripts				-	Create a file in /tmp in linux, named testscript.sh and add some data to it.
+							Give permission by chmod 755 testscript.sh and run ./testscript.sh
+							Add the /tmp/testscript.sh Akash 21 in Jenkins execute shell
+Passing Parameters dynamically to job		-	In general config, check this project is parameterized
+							
 
 
 ------------------------------------------------------------------------------------------------------------------
