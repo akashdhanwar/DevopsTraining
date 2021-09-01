@@ -10,3 +10,4 @@ echo "text" >> fileName.txt			-	Write to a file
 cp filename filename DestinationDirectory	-	Copy Files
 rm filename					-	Delete a file
 chmod 755 filename				-	Change permission
+sudo apt purge appName				-	Uninstall an app
