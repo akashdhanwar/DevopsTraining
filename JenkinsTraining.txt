@@ -4,14 +4,14 @@ We can create jobs in Jenkins Server that can help local testing and merging to 
 ------------------------------------------------------ JAVA SETUP ------------------------------------------------ 
 sudo apt-get -y install openjdk-8-jdk openjdk-8-jre		-	Install Java 8 or 11 for Jenkins
 printenv							-	Print environment variables
-" cat >> etc/environment <<EOL					-	Set Path of java 8
+" cat >> /etc/environment <<EOL					-	Set Path of java 8
 > JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 > JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 > EOL "
 ------------------------------------------------------------------------------------------------------------------
 
 
------------------------------------------------------ JENKINS SETUP ----------------------------------------------
+----------------------------------------------------- JENKINS SETUP ---------------------------------------------------
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
@@ -22,14 +22,14 @@ sudo systemctl status jenkins
 sudo systemctl enable jenkins		-	Enable on system startup
 
 http://10.0.2.20:8080			-	View Jenkins, IP:Port.
-						Copy initial Admin password by printing cat the url provided.
+						Copy initial Admin password by printing cat the url provided on page.
 						Default plugins, give admin username pw
 
 My Local Username Pw			-	akashdhanwar
 http://10.0.2.20:8080/			-	Can give domain name in Jenkins URL to redirect to it
 
 Can use on DigitalOcean/Aws/Azure/LocalMachine
-------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
 
 
 ---------------------------------------------- MASTER and WORKER/SLAVE NODES -------------------------------------
@@ -54,6 +54,9 @@ Passing Parameters dynamically to job		-	In general config, check this project i
 
 
 ----------------------------------------------- CONTINUOUS INTEGRATION --------------------------------------------
+Integrate Jenkins with Github using plugin. Manage Jenkins > Manage Plugins > Available > Github Integration
+Install maven. mvn --version. sudo apt-get install maven.
+Configure Jenkins with Maven. Manage Jenkins > Global Tool Configuration > Add JDK
 
 
 -------------------------------------------------------------------------------------------------------------------
