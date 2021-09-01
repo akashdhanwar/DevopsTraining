@@ -57,6 +57,7 @@ Passing Parameters dynamically to job		-	In general config, check this project i
 Integrate Jenkins with Github using plugin. Manage Jenkins > Manage Plugins > Available > Github Integration
 Install maven. mvn --version. sudo apt-get install maven.
 Configure Jenkins with Maven. Manage Jenkins > Global Tool Configuration > Add JDK , Add Git, Add Maven(/usr/share/maven)
+Maven Project Url Clone it - https://github.com/anshulc55/Jenkins_Upgradev3.git
 
 Lec 51 check for reply
 
