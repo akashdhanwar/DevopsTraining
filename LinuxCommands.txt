@@ -1,13 +1,73 @@
-sudo apt-get update				-	Update System
-apt-get install git				-	Install a software
+Jenkins is a Execution Engine that is written in java and supports integration, building, testing and deployment.
+We can create jobs in Jenkins Server that can help local testing and merging to remote server automatically.
 
-touch filename.txt				-	To create file
-cat Filename.txt				-	To print file
-pwd						-	Present working directory
-ls -al						-	View Files and directory in a directory
-vi Filename					-	Open/Edit a file
-echo "text" >> fileName.txt			-	Write to a file
-cp filename filename DestinationDirectory	-	Copy Files
-rm filename					-	Delete a file
-chmod 755 filename				-	Change permission
-sudo apt purge appName				-	Uninstall an app
+------------------------------------------------------ JAVA SETUP ------------------------------------------------ 
+sudo apt-get -y install openjdk-8-jdk openjdk-8-jre		-	Install Java 8 or 11 for Jenkins
+printenv							-	Print environment variables
+" cat >> /etc/environment <<EOL					-	Set Path of java 8
+> JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+> JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+> EOL "
+------------------------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------- JENKINS SETUP ---------------------------------------------------
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+sudo systemctl enable jenkins		-	Enable on system startup
+
+http://10.0.2.20:8080			-	View Jenkins, IP:Port.
+						Copy initial Admin password by printing cat the url provided on page.
+						Default plugins, give admin username pw
+
+My Local Username Pw			-	akashdhanwar
+http://10.0.2.20:8080/			-	Can give domain name in Jenkins URL to redirect to it
+
+Can use on DigitalOcean/Aws/Azure/LocalMachine
+-----------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------- MASTER and WORKER/SLAVE NODES -------------------------------------
+Master node controls load distribution of slave nodes
+On slave node Jenkins installation not required, only java required
+
+Master node schedules Build job, dispatch execution to slave node, monitor result and record the build result
+Slave node only executes build dispatched by master
+------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------- JOB CREATION/BASICS -----------------------------------------------------------------
+Login and create a new item
+We can manage our Jobs in different categories as mentioned in configure tab.
+
+Executing scripts				-	Create a file in /tmp in linux, named testscript.sh and add some data to it.
+							Give permission by chmod 755 testscript.sh and run ./testscript.sh
+							Add the /tmp/testscript.sh Akash 21 in Jenkins execute shell
+Passing Parameters dynamically to job		-	In general config, check this project is parameterized. 
+							Used in Automated testing where different different data is used
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------- CONTINUOUS INTEGRATION ------------------------------------------------------
+Integrate Jenkins with Github using plugin. Manage Jenkins > Manage Plugins > Available > Github Integration
+Install maven. mvn --version. sudo apt-get install maven.
+
+Configure Jenkins with Maven. Manage Jenkins > Global Tool Configuration > Add JDK , Add Git, Add Maven(/usr/share/maven)
+Maven Project Url Clone it - https://github.com/anshulc55/Jenkins_Upgradev3.git
+Learn about lifecycle phase or goals in maven
+
+
+Lec 51 check for reply
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
