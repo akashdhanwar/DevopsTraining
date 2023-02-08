@@ -1,0 +1,64 @@
+Terraform is a DevOps tool for Infrastructure as a code(IaC)
+
+IaC - We can write codify entire provisioning process like db, network, storage or application config
+
+Large shell script are converted into simple terraform code
+
+IaC tools - Configuration Management    -   Ansible, Puppet, SaltStack  -   Used to install and manage software on existing resources
+                                                                            Maintains Standard code
+                                                                            Version Control repository
+                                                                            Idempotent - run code multiple times and made necessary changes to bring env in defined stage
+            Server Templating           -   Docker, Packer, Vagrant     -   Used to create custom image of VM or container
+                                                                            Pre installed Software and Dependencies
+                                                                            Virtual Machine or Docker Images
+                                                                            Immutable Infrastructure - Once container deployed, it remains running. Image is updated through new instance
+            Provisioning tools          -   Terraform, Cloud Formation  -   Deploy Immutable Infrastructure resources
+                                                                            Servers, Databases, Network components, etc
+                                                                            Multiple Providers
+
+
+Terraform is a IaC Provisioning tool developed by HashiCorp
+Deploy Infrastructure across multiple platforms including private and public cloud like AWS, Azure through Providers
+Providers help terraform help manage third party platform through third party API's
+Provider enable terraform to manage cloud platforms like AWS, Azure an well a network Infrastructure as well as Monitoring and Data Monitoring tool as well as Database as well as Version Control like git
+Terraform uses Hcl(HashiCorp Configuration Language) language with .tf file extension
+
+
+
+
+
+
+
+
+
+
+
+Why Terraform               -   We can write IaC
+                                Infra as a code can be created anywhere on any provider like AWS
+                                Cloud formation can be done only on specific provider like AWS
+Terraform vs Ansible        -   Ansible is for purely Configuration management and Terraform for Infrastructure as a Code
+                                Single code can create infra and single can delete infra in Terraform. But for Ansible we have to write another file for deletion
+When to use what            -   Terraform used where there is no infra and we have to design infra
+                                Create Infra like VMs and connection configuration like private or public by Terraform
+                                For configuration inside infra like application deploy into it, this is done by Ansible, Chef Puppet
+Install Terraform           -   https://developer.hashicorp.com/terraform/downloads
+                                Windows -
+                                Download and Extract. Open cmd in that place and run ".\terraform --help"
+                                Set the path to environment variables and check "terraform --help"
+                                Install VS Code and Add HashiCorp Terraform plugin
+                                Linux -
+                                Go to downloads and "unzip terraformFileName", go inside folder and ".\terraform --help"
+                                "echo $PATH" where binary are stored
+                                "which touch" tells where the binary file of touch command is
+                                "export PATH=$PATH:$(pwd)" set the current path to environment
+                                "cd /tmp", "terraform --help" wil not work here
+                                So "sudo cp terraformFile /usr/local/bin", This will run everywhere
+Hello World configuration   -   Windows -
+                                Create a first.tf file.         blockType "label1" "label2" .... {
+                                                                    // Identifiers = Expressions
+                                                                    # this is also comment
+                                                                }
+                                Example -   output hello1{
+                                                value = "Hello"
+                                            }
+                                Run by "terraform plan"
