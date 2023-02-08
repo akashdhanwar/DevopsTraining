@@ -1,3 +1,7 @@
-output "print1" {
-  value = "Hello"
+output "firstOutputBlock" {
+  value = "First block"
+}
+
+output "secondOutputBlock" {
+  value = "Second block"
 }

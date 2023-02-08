@@ -53,12 +53,21 @@ Install Terraform           -   https://developer.hashicorp.com/terraform/downlo
                                 "export PATH=$PATH:$(pwd)" set the current path to environment
                                 "cd /tmp", "terraform --help" wil not work here
                                 So "sudo cp terraformFile /usr/local/bin", This will run everywhere
-Hello World configuration   -   Windows -
-                                Create a first.tf file.         blockType "label1" "label2" .... {
+Hello World configuration   -   Create a first.tf file.         blockType "label1" "label2" .... {
                                                                     // Identifiers = Expressions
                                                                     # this is also comment
                                                                 }
-                                Example -   output hello1{
-                                                value = "Hello"
-                                            }
+                                output "firstOutputBlock" {
+                                  value = "First block"
+                                }
                                 Run by "terraform plan"
+Hello World Configuration   -   first.tf.json
+in JSON                         {
+                                  "output": {
+                                    "firstOutputBlockJson": {
+                                      "value": "First JSON Block"
+                                    }
+                                  }
+                                }
+Multiple .tf files          -   Sequence of loading files is loaded in Alphabetical order
+Variables                   -   
