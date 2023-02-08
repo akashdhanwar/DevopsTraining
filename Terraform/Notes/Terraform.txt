@@ -69,5 +69,4 @@ in JSON                         {
                                     }
                                   }
                                 }
-Multiple .tf files          -   Sequence of loading files is loaded in Alphabetical order
-Variables                   -   
+Multiple .tf files          -   Sequence of loading files is loaded in Alphabetical order of Labelname
