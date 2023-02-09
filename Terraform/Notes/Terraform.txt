@@ -41,3 +41,6 @@ Terraform vs Ansible        -   Ansible is for purely Configuration management a
 When to use what            -   Terraform used where there is no infra and we have to design infra
                                 Create Infra like VMs and connection configuration like private or public by Terraform
                                 For configuration inside infra like application deploy into it, this is done by Ansible, Chef Puppet
+
+
+https://www.youtube.com/watch?v=c0woivHFOPg&list=PL6XT0grm_TfgdaAjTmLb4QedMCCMQHISm&index=20
