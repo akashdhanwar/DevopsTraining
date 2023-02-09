@@ -14,5 +14,5 @@ output "secondOutputBlock" {
 }
 
 output "thirdOutputBlock" {
-  value = "Second block. \nAs many output block as we want."
+  value = "Third block. \nAs many output block as we want. \nCan be configured in JSON also. \nRun by command terraform plan. \nSequence of loading files is loaded in Alphabetical order of Labelname."
 }
