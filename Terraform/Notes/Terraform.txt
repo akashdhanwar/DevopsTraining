@@ -41,35 +41,3 @@ Terraform vs Ansible        -   Ansible is for purely Configuration management a
 When to use what            -   Terraform used where there is no infra and we have to design infra
                                 Create Infra like VMs and connection configuration like private or public by Terraform
                                 For configuration inside infra like application deploy into it, this is done by Ansible, Chef Puppet
-Install Terraform           -   https://developer.hashicorp.com/terraform/downloads
-                                Windows -
-                                Download and Extract. Open cmd in that place and run ".\terraform --help"
-                                Set the path to environment variables and check "terraform --help"
-                                Install VS Code and Add HashiCorp Terraform plugin
-                                Linux -
-                                Go to downloads and "unzip terraformFileName", go inside folder and ".\terraform --help"
-                                "echo $PATH" where binary are stored
-                                "which touch" tells where the binary file of touch command is
-                                "export PATH=$PATH:$(pwd)" set the current path to environment
-                                "cd /tmp", "terraform --help" wil not work here
-                                So "sudo cp terraformFile /usr/local/bin", This will run everywhere
-Hello World configuration   -   Create a first.tf file.         blockType "label1" "label2" .... {
-                                                                    // Identifiers = Expressions
-                                                                    # this is also comment
-                                                                }
-                                output "firstOutputBlock" {
-                                  value = "First block"
-                                }
-                                Run by "terraform plan"
-Hello World Configuration   -   first.tf.json
-in JSON                         {
-                                  "output": {
-                                    "firstOutputBlockJson": {
-                                      "value": "First JSON Block"
-                                    }
-                                  }
-                                }
-Multiple .tf files          -   Sequence of loading files is loaded in Alphabetical order of Labelname
-
-
-Lec-15 - https://www.youtube.com/watch?v=eV2PjxAwXHk&list=PL6XT0grm_TfgdaAjTmLb4QedMCCMQHISm&index=15

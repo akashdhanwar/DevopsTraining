@@ -22,3 +22,11 @@ variable "users" {
     type = list
     default = ["Akash", "Shreet"]
 }
+
+variable "mapAge" {
+  type = map
+  default = {
+    akash: 20
+    shreet: 30
+  }
+}

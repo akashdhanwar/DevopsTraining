@@ -1,0 +1,14 @@
+STEPS -
+
+https://developer.hashicorp.com/terraform/downloads
+Windows -
+    Download and Extract. Open cmd in that place and run ".\terraform --help"
+    Set the path to environment variables and check "terraform --help"
+    Install VS Code and Add HashiCorp Terraform plugin
+Linux -
+    Go to downloads and "unzip terraformFileName", go inside folder and ".\terraform --help"
+    "echo $PATH" where binary are stored
+    "which touch" tells where the binary file of touch command is
+    "export PATH=$PATH:$(pwd)" set the current path to environment
+    "cd /tmp", "terraform --help" wil not work here
+    So "sudo cp terraformFile /usr/local/bin", This will run everywhere
