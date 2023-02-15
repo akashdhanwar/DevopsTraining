@@ -43,4 +43,4 @@ When to use what            -   Terraform used where there is no infra and we ha
                                 For configuration inside infra like application deploy into it, this is done by Ansible, Chef Puppet
 
 
-https://www.youtube.com/watch?v=c0woivHFOPg&list=PL6XT0grm_TfgdaAjTmLb4QedMCCMQHISm&index=20
+https://www.youtube.com/watch?v=dbQHjnAOzrs&list=PL6XT0grm_TfgdaAjTmLb4QedMCCMQHISm&index=23
