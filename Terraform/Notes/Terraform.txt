@@ -34,5 +34,3 @@ Terraform uses Hcl(HashiCorp Configuration Language) language with .tf file exte
 
 
 
-
-https://www.youtube.com/watch?v=dbQHjnAOzrs&list=PL6XT0grm_TfgdaAjTmLb4QedMCCMQHISm&index=23

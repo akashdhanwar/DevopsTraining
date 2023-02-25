@@ -6,26 +6,29 @@
 # Creating a Repo on Github         -       Go to https://registry.terraform.io/browse/providers and serch for github plugin
 #                                           https://registry.terraform.io/providers/integrations/github/latest/docs#example-usage
 #                                           https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
-# terraform plan                    -       Read PWD configuration files and tell thst what the configuration will do
+#                                           Provide the provider in terraform file
 # terraform providers               -       Tells providers used by PWD
-# terraform init                    -       Initialize and install all provider plugins
-#                                           A terraform folder is created with all provider plugins
-#                                           terraform plan
-#                                           terraform apply
-# terraform apply                   -       Yes/No
-#                                           It will break due to authentication failure
+# terraform plan                    -       Read PWD configuration files and tell that what the configuration will do
+#                                           "terraform plan" will give Inconsistent dependency lock file
+# terraform init                    -       Initialize and install all provider plugins. A terraform folder is created with all provider plugins.
+#                                           "terraform init" will download plugins in terraform folder
+#                                           "terraform plan" will tell what it will do
+# terraform apply                   -       "terraform apply", enter yes and It will break due to 401 authentication
 #                                           Go to Github -> Settings -> Developer Settings -> Personal Access Token -> Select all and generate a token
-#                                           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
+#                                           Add in token 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
+#                                           "terraform apply" will create a repo on github now and a tfstate file will be created
+# 
+
 
 provider "github" {
-  token = "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"
+  token = "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"
 }
 
 resource "github_repository" "localName" {
   name        = "terraform-temp-repo"
   description = "Testing creation"
   visibility = "public"
-  auto_init = true
+  auto_init = true                          // Readme file
 
 #   template {
 #     owner                = "github"
