@@ -8,20 +8,24 @@
 #                                           https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
 #                                           Provide the provider in terraform file
 # terraform providers               -       Tells providers used by PWD
-# terraform plan                    -       Read PWD configuration files and tell that what the configuration will do
+# terraform plan                    -       Read PWD configuration files and tell that what the configuration it will do
+#                                           Reads terraform.tfstate file and then check configuration
 #                                           "terraform plan" will give Inconsistent dependency lock file
 # terraform init                    -       Initialize and install all provider plugins. A terraform folder is created with all provider plugins.
 #                                           "terraform init" will download plugins in terraform folder
 #                                           "terraform plan" will tell what it will do
-# terraform apply                   -       "terraform apply", enter yes and It will break due to 401 authentication
+# terraform apply                   -       "terraform apply", enter yes and It will break due to 401 authentication. --auto-approve for not asking yes
 #                                           Go to Github -> Settings -> Developer Settings -> Personal Access Token -> Select all and generate a token
-#                                           Add in token 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
+#                                           Add in token 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
 #                                           "terraform apply" will create a repo on github now and a tfstate file will be created
-# 
+# terraform.tfstate file            -       Contains resources information. Do not update manually
+#                                           terraform.tfstate.backup file will be created when we add another resource
+# terraform destroy                 -       Destroy all resources from tfstate file
+#                                           For seleting selected resource, "terraform destroy --target github_repository.secondRepoLocalName"
 
 
 provider "github" {
-  token = "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"
+  token = "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"
 }
 
 resource "github_repository" "localName" {
@@ -29,10 +33,16 @@ resource "github_repository" "localName" {
   description = "Testing creation"
   visibility = "public"
   auto_init = true                          // Readme file
-
 #   template {
 #     owner                = "github"
 #     repository           = "terraform-template-module"
 #     include_all_branches = true
 #   }
+}
+
+resource "github_repository" "secondRepoLocalName" {
+  name        = "terraform-second-repo"
+  description = "Testing second creation"
+  visibility = "public"
+  auto_init = true                          // Readme file
 }
