@@ -1,0 +1,8 @@
+Why Terraform               -   We can write IaC
+                                Infra as a code can be created anywhere on any provider like AWS
+                                Cloud formation can be done only on specific provider like AWS
+Terraform vs Ansible        -   Ansible is for purely Configuration management and Terraform for Infrastructure as a Code
+                                Single code can create infra and single can delete infra in Terraform. But for Ansible we have to write another file for deletion
+When to use what            -   Terraform used where there is no infra and we have to design infra
+                                Create Infra like VMs and connection configuration like private or public by Terraform
+                                For configuration inside infra like application deploy into it, this is done by Ansible, Chef Puppet
