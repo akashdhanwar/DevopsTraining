@@ -18,6 +18,7 @@ Commands    -   terraform plan                              -   terraform plan -
                 terraform refresh
                 terraform output
                 terraform console
+                terraform fmt
 
 files       -   terraform.tfvars
                 terraform.tfstate
