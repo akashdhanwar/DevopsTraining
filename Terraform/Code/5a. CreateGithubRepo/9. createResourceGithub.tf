@@ -16,9 +16,9 @@
 #                                           "terraform plan" will tell what it will do
 # terraform apply                   -       "terraform apply", enter yes and It will break due to 401 authentication. --auto-approve for not asking yes
 #                                           Go to Github -> Settings -> Developer Settings -> Personal Access Token -> Select all and generate a token
-#                                           Add in token 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
+#                                           Add in token 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
 #                                           "terraform apply" will create a repo on github now and a tfstate file will be created
-# terraform.tfstate file            -       Contains resources information. Do not update manually
+# terraform.tfstate file            -       Contains resources information like resources, output variables. Do not update manually
 #                                           Can be seen by "terraform show" command
 #                                           terraform.tfstate.backup file will be created when we add another resource
 # terraform destroy                 -       Destroy all resources from tfstate file
@@ -26,11 +26,13 @@
 # terraform validate                -       Check that the configuration is correct or not
 # terraform refresh                 -       Refreshes the terraform.tfstate file state. 
 #                                           Updated the decription of github
-
+# terraform output                  -       Print something after repo creation like url
+#                                           "terraform output printRepoUrl" will give the value of this output
+# terraform console                 -       
 
 
 provider "github" {
-  token = "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"
+  token = "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"
 }
 
 resource "github_repository" "localName" {
@@ -50,4 +52,8 @@ resource "github_repository" "secondRepoLocalName" {
   description = "Testing second creation"
   visibility = "public"
   auto_init = true                          // Readme file
+}
+
+output "printRepoUrl" {
+  value = github_repository.localName.html_url
 }
