@@ -28,7 +28,7 @@
 #                                           Updated the decription of github
 # terraform output                  -       Print something after repo creation like url
 #                                           "terraform output printRepoUrl" will give the value of this output
-# terraform console                 -       
+# terraform console                 -       Prints any value, output in console using var.userName, etc. Used for debugging. exit
 
 
 provider "github" {
