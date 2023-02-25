@@ -9,10 +9,3 @@ resource "github_repository" "localName" {
 #     include_all_branches = true
 #   }
 }
-
-resource "github_repository" "secondRepoLocalName" {
-  name        = "terraform-second-repo"
-  description = "Testing second creation"
-  visibility = "public"
-  auto_init = true                          // Readme file
-}
